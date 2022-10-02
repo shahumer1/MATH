@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js" integrity="sha512-47N5yVdAeXJ+9qstVMTH2Z0EpX618sjYZcswRwhpldSTD0IbW6yQPtzg4RLrPp/2+TIgEF1elT68/ZBu82nqJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+</head>
+<body>
+    <h1>Enter the value</h1>
+    <form onsubmit="sq();return false">
+        num1: <input type="number" id="s" >
+        <button type="submit">Enter</button>
+    </form>
+    <h2 id="sq"></h2>
+    <h2 id="sqrt"></h2>
+    
+    
+    <script>
+        function sq(){
+            let a=document.querySelector("#s").value
+            a=Number(a)
+            let sq=math.square(a)
+            document.querySelector("#sq").innerHTML="Square:" + sq
+            let sqrt=math.sqrt(a)
+            document.querySelector("#sqrt").innerHTML="Square root:"+sqrt
+        }
+
+
+    </script>
+</body>
+</html>
